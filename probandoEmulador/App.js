@@ -64,7 +64,7 @@ const renderItem = ({item})=>(
             <View>
               <Text>
                 {itemSelected}
-                <Button title='Delete' onPress={deleteItem(itemSelected)}/>
+                <Button title='Delete' onPress={()=>deleteItem(itemSelected)}/>
                 <Button title='Dismiss' onPress={dismissItem}/>
               </Text>
             </View>  
