@@ -28,9 +28,9 @@ const AuthScreen = () => {
       <View style={styles.container}>
         <Text style={styles.titlle}>Registro</Text>
         <Text>Email</Text>
-        <TextInput keyboardType="email-address" autoCapitalize="none" value={email} onChange={setEmail}/>
+        <TextInput keyboardType="email-address" autoCapitalize="none" value={email} onChangeText={setEmail}/>
         <Text>Password</Text>
-        <TextInput secureTextEntry autoCapitalize="none" value={password} onChange={setPassword}/>
+        <TextInput secureTextEntry autoCapitalize="none" value={password} onChangeText={setPassword}/>
         <Button
         title="Registrarme"
         onPress={handleSingUp}
