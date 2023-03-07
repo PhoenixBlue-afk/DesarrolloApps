@@ -1,21 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native';
-
-import { StatusBar } from 'expo-status-bar';
+// import BottomTabNavigator from "./src/navigation/BottomTabNavigator"
+import MainNavigation from './src/navigation'
+import { NavigationContainer } from "@react-navigation/native"
+import { Provider } from "react-redux"
+import store from "./src/store"
+import { useFonts } from "expo-font"
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hola, Coder!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [fontsLoaded] = useFonts({
+    DancingSCript: require("./src/assets/fonts/DancingScript-Regular.ttf"),
+  })
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if (!fontsLoaded) {
+    return null
+  }
+
+  return (
+    <Provider store={store}>
+      <NavigationContainer>
+        <MainNavigation />
+      </NavigationContainer>
+    </Provider>
+  )
+}
