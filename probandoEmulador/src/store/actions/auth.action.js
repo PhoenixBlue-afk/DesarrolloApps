@@ -1,6 +1,6 @@
 import { URL_AUTH_SINGUP } from "../../constants/Database";
 
-export const SIGNUP = "SIGNUP";
+export const SINGUP = "SINGUP";
 
 export const singup =(email, password)=>{
     return async dispatch =>{
@@ -23,7 +23,7 @@ export const singup =(email, password)=>{
             const data = await response.json()
 
             dispatch({
-               type:SIGNUP,
+               type:SINGUP,
                token: data.idToken,
                userId: data.localId
             })
