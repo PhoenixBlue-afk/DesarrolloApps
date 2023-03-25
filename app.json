@@ -1,8 +1,12 @@
 {
   "expo": {
-    "name": "app-map",
-    "slug": "app-map",
+    "name": "Lista de productos",
+    "slug": "lista-de-productos",
     "version": "1.0.0",
+    "platform": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,13 +24,31 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.coderhouse.places",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAhllKdGgSNt5qpCaYJboTd6VkqD9EPX1k"
+        }
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "dbfdb9ad-eae9-4d3f-87cf-add949e9cc4e"
+      }
+    },
+    "owner": "matiasferreria"
   }
 }
