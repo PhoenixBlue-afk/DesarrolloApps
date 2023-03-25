@@ -1,11 +1,10 @@
-import { createStore, combineReducers, applyMiddleware} from 'redux'
+import { applyMiddleware, combineReducers, createStore } from 'redux'
+
+import ItemsReducer from './items.reducer'
 import thunk from 'redux-thunk'
 
-// reducers
-import PlacesReducer from './places.reducer'
-
 const RootReducer = combineReducers({
-    places: PlacesReducer
+    products: ItemsReducer
 })
 
 export default createStore(RootReducer, applyMiddleware(thunk))

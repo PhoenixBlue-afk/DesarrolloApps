@@ -1,4 +1,3 @@
-// navigation
 import MainNavigator from './navigation'
 import { Provider } from 'react-redux'
 import React from 'react';

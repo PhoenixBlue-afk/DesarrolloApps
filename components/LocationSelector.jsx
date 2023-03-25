@@ -2,14 +2,13 @@ import * as Location from "expo-location";
 
 import { Alert, Button, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
-import { useNavigation, useRoute } from "@react-navigation/native";
 
 import { COLORS } from "../constants";
 import MapPreview from "./MapPreview";
+import { useNavigation } from "@react-navigation/native";
 
 const LocationSelector = ({ onLocation, mapLocation }) => {
   const navigation = useNavigation();
-  const route = useRoute();
   const [pickedLocation, setPickedLocation] = useState();
 
   useEffect(() => {
@@ -61,17 +60,17 @@ const LocationSelector = ({ onLocation, mapLocation }) => {
   return (
     <View style={styles.container}>
       <MapPreview location={pickedLocation} style={styles.preview}>
-        <Text> Location en proceso...</Text>
+        <Text> Por favor selecciona donde</Text>
       </MapPreview>
       <View style={styles.actions}>
         <Button
-          title="Obtain Location"
-          color={COLORS.PEACH_PUFF}
+          title="Ubicacion actual"
+          color={COLORS.GRIS}
           onPress={handleGetLocation}
         />
         <Button
-          title="Elegir del Mapa"
-          color={COLORS.LIGTH_PINK}
+          title="📍 Mapa"
+          color={COLORS.BORDO}
           onPress={handlePickOnMap}
         />
       </View>
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     justifyContent: "center",
     alignItems: "center",
-    borderColor: COLORS.BLUSH,
+    borderColor: COLORS.ROJO,
     borderWidth: 1,
   },
   image: {

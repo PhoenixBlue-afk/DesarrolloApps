@@ -1,11 +1,9 @@
-import React from 'react'
 import { NavigationContainer } from "@react-navigation/native";
-
-// stacks
-import PlaceNavigator from './PlaceNavigator'
+import ProductsNavigator from './ProductsNavigator'
+import React from 'react'
 
 export default () => (
     <NavigationContainer>
-        <PlaceNavigator />
+        <ProductsNavigator />
     </NavigationContainer>
 )

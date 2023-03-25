@@ -1,10 +1,8 @@
 import MapView, {Marker} from 'react-native-maps'
 import React, { useLayoutEffect, useState }from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity } from 'react-native'
 
 import Ionicons from '@expo/vector-icons/Ionicons'
-
-// import { TouchableOpacity } from 'react-native-web'
 
 const MapScreen = ({navigation}) => {
 

@@ -5,9 +5,6 @@ import React, { useState } from "react";
 
 import { COLORS } from "../constants";
 
-//import * as Permissions from "expo-permissions";
-
-
 const ImageSelector = (props) => {
   const [pickedUri, setPickedUri] = useState();
 
@@ -42,14 +39,14 @@ const ImageSelector = (props) => {
     <View style={styles.container}>
       <View style={styles.preview}>
         {!pickedUri ? (
-          <Text>No hay imagen seleccionada...</Text>
+          <Text>Por favor seleccione una imagen</Text>
         ) : (
           <Image style={styles.image} source={{ uri: pickedUri }} />
         )}
       </View>
       <Button
-        title="Tomar Foto"
-        color={COLORS.LIGTH_PINK}
+        title="📷"
+        color={COLORS.BORDO}
         onPress={handlerTakeImage}
       />
     </View>
@@ -68,7 +65,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     justifyContent: "center",
     alignItems: "center",
-    borderColor: COLORS.BLUSH,
+    borderColor: COLORS.ROJO,
     borderWidth: 1,
   },
   image: {
